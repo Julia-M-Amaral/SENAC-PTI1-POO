@@ -10,19 +10,32 @@ package com.mycompany.ptipoo;
  * @author jubsz
  */
 public class Ponto {
-
+    
     private int  x,y;
     
-    public Ponto(int x, int y){
-        this.setX(x);
-        this.setY(y);
+    public Ponto(int a, int b){
+        this.setX(a);
+        this.setY(b);
     }
     public Ponto(){
        this.setX(0);
        this.setY(0);
     }
-
     
+    
+    public boolean pontosIguais(int x2, int y2){
+        if(this.getX() == x2 && this.getY() == y2 ){
+            return false;
+        }
+        else{
+           return true;
+        }
+    }
+    
+   public double calcularDis(int x1, int y1){ 
+           double distanciaXY = Math.sqrt(Math.pow(this.getX() - x1,2) + Math.pow(this.getY() - y1,2));
+        return distanciaXY;
+   }
     
     public int getX() {
         return x;
